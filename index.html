@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1728">
+  <meta name="description" content="PATHRAKSHAK — a road-safety reporting and response coordination prototype.">
+  <title>PATHRAKSHAK | Road Safety Response</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement"><span class="pulse"></span> ROAD SAFETY INITIATIVE <span class="announcement-note">Demo mode · No real emergency services connected</span></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Pathrakshak home">
+      <span class="brand-mark">P<span>+</span></span>
+      <span class="brand-copy"><strong>PATHRAKSHAK</strong><small>ROADSAFE INITIATIVE</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#about">About</a>
+      <button class="button button-small" data-scroll-report>Report an incident <span aria-hidden="true">↗</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> SAFER ROADS. FASTER COORDINATION.</div>
+        <h1>Every second<br>can make a <span>difference.</span></h1>
+        <p class="hero-description">A simple road-safety concept to make incident reporting clearer and help responders understand what happened, where it happened, and what support may be needed.</p>
+        <div class="hero-actions">
+          <button class="button" data-scroll-report>Report an incident <span aria-hidden="true">→</span></button>
+          <a class="button button-ghost" href="#dashboard">Explore dashboard <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="trust-row">
+          <div class="avatar-stack" aria-hidden="true"><span>R</span><span>H</span><span>P</span></div>
+          <p><strong>One shared view</strong><br><span>Designed for clearer coordination</span></p>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Illustration of a road and location pin">
+        <div class="visual-glow"></div>
+        <div class="map-label label-top"><span class="tiny-dot green"></span> Incident overview</div>
+        <div class="map-grid"></div>
+        <svg class="road-map" viewBox="0 0 500 420" role="img" aria-label="Stylized map illustration">
+          <path d="M-20 90 C80 100 100 180 180 175 S300 80 520 120" class="map-road outer"/>
+          <path d="M-20 90 C80 100 100 180 180 175 S300 80 520 120" class="map-road inner"/>
+          <path d="M80 -20 C110 80 220 110 245 200 S190 320 240 440" class="map-road outer"/>
+          <path d="M80 -20 C110 80 220 110 245 200 S190 320 240 440" class="map-road inner"/>
+          <path d="M350 -20 C320 90 360 180 330 250 S390 340 420 440" class="map-road outer"/>
+          <path d="M350 -20 C320 90 360 180 330 250 S390 340 420 440" class="map-road inner"/>
+          <path d="M-20 310 C90 275 150 320 250 305 S390 260 520 300" class="map-road outer"/>
+          <path d="M-20 310 C90 275 150 320 250 305 S390 260 520 300" class="map-road inner"/>
+          <circle cx="260" cy="203" r="45" class="pin-halo"/>
+          <circle cx="260" cy="203" r="26" class="pin-circle"/>
+          <path d="M260 185 C250 185 243 193 243 203 C243 216 260 231 260 231 S277 216 277 203 C277 193 270 185 260 185Z" class="pin-shape"/>
+          <circle cx="260" cy="202" r="5" class="pin-core"/>
+          <circle cx="135" cy="124" r="6" class="map-point"/>
+          <circle cx="368" cy="284" r="6" class="map-point"/>
+        </svg>
+        <div class="map-label label-bottom"><span class="location-icon">⌖</span><span><strong>Location-aware concept</strong><small>Location is added only with your permission</small></span></div>
+        <div class="floating-card"><span class="float-icon">✓</span><span><strong>Clear information</strong><small>One report at a time</small></span></div>
+      </div>
+    </section>
+
+    <section class="metrics section-wrap" aria-label="Demo dashboard metrics">
+      <div class="metric-intro"><span class="section-kicker">THE DEMO DASHBOARD</span><h2>Designed for a clearer picture.</h2></div>
+      <div class="metric"><span class="metric-icon orange">◎</span><div><strong id="totalReports">03</strong><small>Sample incidents</small></div></div>
+      <div class="metric"><span class="metric-icon red">!</span><div><strong id="highReports">01</strong><small>High priority</small></div></div>
+      <div class="metric"><span class="metric-icon teal">↗</span><div><strong id="supportReports">02</strong><small>Support requested</small></div></div>
+    </section>
+
+    <section class="features section-wrap" id="how-it-works">
+      <div class="section-heading">
+        <div><span class="section-kicker">HOW PATHRAKSHAK WORKS</span><h2>From incident to information.</h2></div>
+        <p>A simple prototype flow that shows how structured reporting could support a more organized response.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-number">01</span><div class="feature-icon orange-bg">⌖</div><h3>Report the incident</h3><p>Capture the incident type, approximate location, and details in a structured form.</p><span class="feature-tag">Structured input</span></article>
+        <article class="feature-card"><span class="feature-number">02</span><div class="feature-icon blue-bg">◷</div><h3>Review priority</h3><p>A transparent demo rule estimates a priority level from the answers supplied by the reporter.</p><span class="feature-tag">Rule-based demo</span></article>
+        <article class="feature-card"><span class="feature-number">03</span><div class="feature-icon green-bg">⇄</div><h3>Coordinate support</h3><p>Display the report in a dashboard so a reviewer can see the details in one place.</p><span class="feature-tag">Dashboard view</span></article>
+      </div>
+    </section>
+
+    <section class="report-section" id="report">
+      <div class="section-wrap report-layout">
+        <div class="report-intro">
+          <span class="section-kicker light-kicker">INCIDENT REPORT</span>
+          <h2>Share the details.<br><span>Make them count.</span></h2>
+          <p>This form demonstrates the reporting experience. It does not contact emergency services or submit data to a server.</p>
+          <div class="privacy-note"><span>i</span><p><strong>Demo & privacy note</strong><br>Your reports stay in this browser using local storage. Do not enter real personal or emergency information.</p></div>
+        </div>
+        <form id="incidentForm" class="report-form">
+          <div class="form-top"><div><span class="form-step">REPORT · 01</span><h3>Incident details</h3></div><span class="form-icon">＋</span></div>
+          <label for="incidentType">Incident type <span>*</span></label>
+          <select id="incidentType" name="incidentType" required>
+            <option value="">Select incident type</option>
+            <option value="Road accident">Road accident</option>
+            <option value="Vehicle breakdown">Vehicle breakdown</option>
+            <option value="Road hazard">Road hazard</option>
+            <option value="Other">Other</option>
+          </select>
+          <div class="form-row">
+            <div><label for="severity">People affected <span>*</span></label><select id="severity" name="severity" required><option value="">Select estimate</option><option value="1">No known injuries</option><option value="2">1–2 people</option><option value="3">3 or more people</option><option value="4">Unknown / possible serious injury</option></select></div>
+            <div><label for="support">Support needed <span>*</span></label><select id="support" name="support" required><option value="">Select support</option><option value="Medical">Medical assistance</option><option value="Police">Police / traffic support</option><option value="Roadside">Roadside assistance</option><option value="Unsure">Not sure</option></select></div>
+          </div>
+          <label for="location">Location or landmark <span>*</span></label>
+          <div class="location-input"><input id="location" name="location" placeholder="e.g. Near the main campus gate" required maxlength="100"><button type="button" id="locateButton" class="locate-button" title="Use browser location">⌖ Locate</button></div>
+          <p class="field-help" id="locationHelp">You can type a landmark or choose Locate and allow browser permission.</p>
+          <label for="details">Additional details <span>*</span></label>
+          <textarea id="details" name="details" rows="3" maxlength="400" placeholder="Briefly describe what happened (demo only)." required></textarea>
+          <button type="submit" class="button submit-button">Submit report <span aria-hidden="true">→</span></button>
+          <p class="form-footnote">Prototype only · No real dispatch or notifications</p>
+          <div id="formMessage" class="form-message" role="status" aria-live="polite" hidden></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="dashboard section-wrap" id="dashboard">
+      <div class="section-heading dashboard-heading">
+        <div><span class="section-kicker">RESPONSE OVERVIEW</span><h2>Incident dashboard.</h2></div>
+        <div class="dashboard-actions"><span class="demo-status"><span class="tiny-dot green"></span> Demo data</span><button id="resetButton" class="button button-ghost button-small">Reset demo</button></div>
+      </div>
+      <div class="dashboard-grid">
+        <div class="incident-panel">
+          <div class="panel-heading"><div><h3>Recent reports</h3><p>Sample and locally created reports</p></div><span class="panel-count" id="panelCount">03 reports</span></div>
+          <div class="incident-list" id="incidentList">
+            <article class="incident-row"><span class="incident-symbol orange-bg">⚑</span><div class="incident-info"><strong>Vehicle collision</strong><small>Ring Road · 10:42 AM</small><div class="incident-meta"><span class="priority priority-high">High priority</span><span>Medical support</span></div></div><span class="row-arrow">↗</span></article>
+            <article class="incident-row"><span class="incident-symbol blue-bg">⌁</span><div class="incident-info"><strong>Vehicle breakdown</strong><small>North Avenue · 10:18 AM</small><div class="incident-meta"><span class="priority priority-medium">Medium priority</span><span>Roadside support</span></div></div><span class="row-arrow">↗</span></article>
+            <article class="incident-row"><span class="incident-symbol green-bg">△</span><div class="incident-info"><strong>Road hazard</strong><small>Market Crossing · 09:55 AM</small><div class="incident-meta"><span class="priority priority-low">Low priority</span><span>Traffic support</span></div></div><span class="row-arrow">↗</span></article>
+          </div>
+          <div class="panel-foot"><span class="tiny-dot green"></span> Local demo dashboard · not monitored</div>
+        </div>
+        <aside class="resource-panel">
+          <span class="section-kicker">RESPONSE DIRECTORY</span><h3>Support categories</h3><p class="resource-desc">Example categories that a future connected system could route to.</p>
+          <div class="resource-item"><span class="resource-icon red-bg">✚</span><span><strong>Medical response</strong><small>For injury-related incidents</small></span><span class="resource-arrow">↗</span></div>
+          <div class="resource-item"><span class="resource-icon blue-bg">◈</span><span><strong>Police / traffic</strong><small>For road safety and traffic</small></span><span class="resource-arrow">↗</span></div>
+          <div class="resource-item"><span class="resource-icon green-bg">⚙</span><span><strong>Roadside assistance</strong><small>For breakdowns and hazards</small></span><span class="resource-arrow">↗</span></div>
+          <div class="directory-note">Illustrative directory only. No contacts or services are called from this page.</div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="section-wrap about-inner">
+        <div><span class="section-kicker light-kicker">ABOUT THE PROJECT</span><h2>Technology with a human purpose.</h2></div>
+        <div><p>PATHRAKSHAK is a road-safety project concept focused on making incident reporting and response information easier to organize. This version is a frontend prototype built with HTML, CSS, and JavaScript.</p><p class="about-small">Future scope could include a secure backend, verified responder directory, maps, and tested integrations. Those capabilities are not part of this demo.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">P<span>+</span></span><span class="brand-copy"><strong>PATHRAKSHAK</strong><small>ROADSAFE INITIATIVE</small></span></a><p>Designed to support clearer road-safety reporting.</p><span class="footer-label">FRONTEND PROTOTYPE · 2026</span></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
